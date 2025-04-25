@@ -37,6 +37,17 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
+.skill-card {
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    perspective: 1000px;
+  }
+  .skill-card:hover {
+    transform: rotateY(180deg);
+  }
+  
+
 .skill-card i {
     font-size: 4rem;
     color: #b74b4b;
@@ -743,7 +754,7 @@ span{
     </header>
     <section class="home">
         <div class="home-img">
-            <img src="https://scontent.fccu31-2.fna.fbcdn.net/v/t39.30808-6/469081727_569496492481419_715204077162463030_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=erVoGqOmDdEQ7kNvgE1hJj-&_nc_zt=23&_nc_ht=scontent.fccu31-2.fna&_nc_gid=AN2QiyRzoZePusKrxDt6fZz&oh=00_AYDCtpRG49dR6dvFeF2WU8pIHa4pU_SwhF1JNJCp43vTxg&oe=67A6C1C8" alt="">
+            <img src="my photo.jpg" alt="">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>Sohan</span></h1>
@@ -818,7 +829,8 @@ span{
    
   <section id="skills">
     <div class="skills-container">
-        <h1 class="skills-title" data-aos="fade-up">My Technical Skills</h1>
+        <h1 class="skills-title" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1500">My Technical Skills</h1>
+
         <div class="skills-grid">
             <div class="skill-card" data-aos="fade-right">
                 <i class="fa-brands fa-cuttlefish"></i>
@@ -935,10 +947,36 @@ signUpButton.addEventListener('click', () => {
   // Display a success message
   signUpMessage.textContent = 'You are now registered!';
   signUpMessage.style.display = 'block';
+
+
+
 });
 
 
 </script>
-<audio src=""></audio>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+<script>
+  VANTA.WAVES({
+    el: "body",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.0,
+    scaleMobile: 1.0,
+    color: 0xb74b4b,
+    shininess: 50.0,
+    waveHeight: 20.0,
+    waveSpeed: 1.0,
+    zoom: 0.85
+  })
+</script>
+
+
+<audio src=""></audio> 
 </body>
 </html>
